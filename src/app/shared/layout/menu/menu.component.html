@@ -1,0 +1,20 @@
+<nav class="menu">
+    <ul>
+        <li>
+            <a routerLink="/dashboard" class="menu-logo">
+                <svg class="icon icon-logo-wiboo">
+                    <use xlink:href="#icon-logo-wiboo"></use>
+                </svg>
+                Nome da Loja
+            </a>
+        </li>
+        <li *ngFor="let menu of menuItens">
+            <a class="menu-link">
+                {{menu.name}}
+                <svg class="icon icon-arrow-down menu-link-arrowDown">
+                    <use xlink:href="#icon-arrow-down"></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</nav>

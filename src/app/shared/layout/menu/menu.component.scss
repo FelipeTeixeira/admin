@@ -1,0 +1,51 @@
+@import "variables";
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $color-purple;
+    width: $menu-width;
+    z-index: 9;
+
+    &-logo {
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        background-color: $color-purple-dark;
+        height: $header-height;
+        display: flex;
+        align-items: center;
+
+        .icon-logo-wiboo {
+            font-size: 28px;
+            margin-right: $space-side;
+        }
+    }
+
+    &-link {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        align-items: center;
+        transition: background-color 0.2s ease;
+        cursor: pointer;
+
+        &-arrowDown {
+            font-size: 12px;
+            margin-left: auto;
+        }
+
+        &:hover {
+            background-color: #624894;
+        }
+    }
+
+    &-logo,
+    &-link {
+        padding: $space-side;
+    }
+
+}
