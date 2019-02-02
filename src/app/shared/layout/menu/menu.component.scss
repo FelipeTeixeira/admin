@@ -28,9 +28,10 @@
     &-link {
         font-size: 14px;
         color: rgba(255, 255, 255, 0.8);
+        font-weight: bold;
         display: flex;
         align-items: center;
-        transition: background-color 0.2s ease;
+        transition: background-color 0.2s ease, transform 0.2s ease;
         cursor: pointer;
 
         &-arrowDown {
@@ -38,8 +39,21 @@
             margin-left: auto;
         }
 
+        &-icon {
+            font-size: 24px;
+            margin-right: $space-side;
+        }
+
         &:hover {
-            background-color: #624894;
+            background-color: #271046;
+        }
+
+        &.is-active {
+            background-color: #1E0C35;
+
+            .menu-link-iconDown {
+                transform: rotate(-180deg);
+            }
         }
     }
 
@@ -48,4 +62,23 @@
         padding: $space-side;
     }
 
+
+     &-submenu {
+         font-size: 14px;
+        height: 0;
+        overflow: hidden;
+        background-color: #391868;
+        transition: height 0.4s ease;
+
+        &-link {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 12px $space-side;
+            display: block;
+            line-height: 1;
+
+            &:hover {
+                color: #FFF;
+            }
+        }
+    }
 }

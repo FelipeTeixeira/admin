@@ -8,13 +8,26 @@
                 Nome da Loja
             </a>
         </li>
-        <li *ngFor="let menu of menuItens">
-            <a class="menu-link">
+        <li *ngFor="let menu of menuItens; let i = index">
+            <a class="menu-link" (click)="toggleMenu(i)" [ngClass]="{'is-active': menu.isActive}">
+                <svg class="icon menu-link-icon">
+                    <use attr.xlink:href="#icon-{{menu.icon}}"></use>
+                </svg>
+
                 {{menu.name}}
-                <svg class="icon icon-arrow-down menu-link-arrowDown">
+
+                <svg *ngIf="menu.subMenu" class="icon icon-arrow-down menu-link-arrowDown">
                     <use xlink:href="#icon-arrow-down"></use>
                 </svg>
             </a>
+
+            <ul *ngIf="menu.subMenu" class="menu-submenu" #submenu [style.height.px]="menu.isActive ? submenu.scrollHeight : 0">
+                <li *ngFor="let submenu of menu.subMenu">
+                    <a [routerLink]="submenu.url" class="menu-submenu-link">
+                        {{submenu.name}}
+                    </a>
+                </li>
+            </ul>
         </li>
     </ul>
 </nav>
