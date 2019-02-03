@@ -1,0 +1,55 @@
+@import "variables";
+
+.perfomance {
+    &-title {
+        font-size: 18px;
+        margin-bottom: 14px;
+        display: block;
+    }
+
+    &-progressBar {
+        background-color: #f7f7f7;
+        height: 12px;
+        position: relative;
+        margin: 6px 0 $space-side;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            left: 0;
+            background-color: #f7f7f7;
+            transition: width 0.2s ease;
+        }
+
+        &-total {
+            font-size: 14px;
+            font-weight: 900;
+            float: right;
+        }
+
+
+        &-facebook,
+        &-whatsapp,
+        &-twitter {
+            position: absolute;
+            height: 100%;
+            left: 0;
+            transition: width 0.2s ease;
+        }
+
+        &-facebook {
+            background-color: #4267b2;
+        }
+
+        &-whatsapp {
+            background-color: #009688;
+        }
+
+        &-twitter {
+            background-color: #1da1f2;
+        }
+    }
+}
