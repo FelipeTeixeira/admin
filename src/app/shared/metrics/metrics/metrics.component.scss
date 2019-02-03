@@ -1,0 +1,80 @@
+@import "variables";
+
+.metrics {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    text-align: center;
+
+    &-icon {
+        font-size: 24px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 6px;
+        @include square(40px);
+        margin: 0 auto 12px;
+
+        &.blue {
+            background: #e5f2ff;
+            color: #0084ff;
+        }
+
+        &.yellow {
+            color: #fd267d;
+            background: #fff0f6;
+        }
+
+        &.purple {
+            color: $color-purple;
+            background: #eee3f9;
+        }
+
+        &.green {
+            color: $color-green;
+            background-color: #ebf9ea;
+        }
+
+        &.pink {
+            background: #f3f1ff;
+            color: #886cff;
+        }
+    }
+
+    &-name {
+        font-size: 12px;
+    }
+
+    &-val {
+        font-size: 32px;
+        font-weight: 900;
+        margin: 4px 0;
+    }
+
+    &-details {
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-up {
+            color: $color-green;
+
+            &::before {
+                @include css-triangle($color-green, up, 6px);
+                margin-right: 4px;
+            }
+        }
+
+        &-down {
+            color: $color-red;
+
+            &::before {
+                @include css-triangle($color-red, down, 6px);
+                margin-right: 4px;
+            }
+        }
+    }
+}

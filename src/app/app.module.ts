@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './shared/layout/layout.module';
+import { MetricsModule } from './shared/metrics/metrics.module';
 
 @NgModule({
     declarations: [
@@ -12,7 +13,8 @@ import { LayoutModule } from './shared/layout/layout.module';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        LayoutModule
+        LayoutModule,
+        MetricsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

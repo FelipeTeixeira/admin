@@ -1,30 +1,12 @@
 @import "variables";
+@import "reset";
 @import "grid/bootstrap-grid";
+@import "tooltip";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: $font;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-a {
-    text-decoration: none;
-}
-
-.icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
+.card {
+    color: $color-black;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    padding: $space-side;
 }

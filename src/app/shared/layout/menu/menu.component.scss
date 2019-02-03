@@ -37,6 +37,7 @@
         &-arrowDown {
             font-size: 12px;
             margin-left: auto;
+            transition: transform 0.2s ease;
         }
 
         &-icon {
@@ -49,9 +50,9 @@
         }
 
         &.is-active {
-            background-color: #1E0C35;
+            background-color: #1e0c35;
 
-            .menu-link-iconDown {
+            .menu-link-arrowDown {
                 transform: rotate(-180deg);
             }
         }
@@ -62,9 +63,8 @@
         padding: $space-side;
     }
 
-
-     &-submenu {
-         font-size: 14px;
+    &-submenu {
+        font-size: 14px;
         height: 0;
         overflow: hidden;
         background-color: #391868;
@@ -72,12 +72,11 @@
 
         &-link {
             color: rgba(255, 255, 255, 0.8);
-            padding: 12px $space-side;
+            padding: 12px $space-side 12px 52px;
             display: block;
-            line-height: 1;
 
             &:hover {
-                color: #FFF;
+                color: #fff;
             }
         }
     }
