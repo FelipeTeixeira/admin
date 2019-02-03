@@ -1,1 +1,16 @@
-dashboard main
+<ul class="nav">
+    <li class="nav-item" *ngFor="let navItem of navList" [ngClass]="'nav-item-' + navItem.icon">
+
+        <svg class="icon nav-item-icon" [ngClass]="'icon-' + navItem.icon">
+            <use attr.xlink:href="#icon-{{navItem.icon}}"></use>
+        </svg>
+
+        <strong class="nav-item-name">
+            {{navItem.name}}
+        </strong>
+
+        <a *ngFor="let link of navItem.links" class="nav-item-subItem">
+            {{link.name}}
+        </a>
+    </li>
+</ul>

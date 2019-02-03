@@ -1,0 +1,55 @@
+@import "variables";
+
+.nav {
+    display: flex;
+    justify-content: center;
+    margin: 64px 0;
+
+    &-item {
+        text-align: center;
+        color: #fff;
+        flex: 1;
+        max-width: 220px;
+        margin: 0 16px;
+        border-radius: 4px;
+        padding: $space-side;
+
+        &-active {
+            background-color: #d90e0e;
+        }
+
+        &-fidelity {
+            background-color: #f03785;
+        }
+
+        &-promote {
+            background-color: #4f3a78;
+        }
+
+        &-shop {
+            background-color: #00e069;
+        }
+
+        &-icon {
+            font-size: 90px;
+            display: block;
+            margin: 32px auto;
+        }
+
+        &-name {
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        &-subItem {
+            font-size: 14px;
+            color: $color-black;
+            display: block;
+            padding: 8px;
+            background-color: #fff;
+            margin: 16px 0;
+            border-radius: 20px;
+        }
+    }
+}

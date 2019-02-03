@@ -58,7 +58,13 @@ export class MenuComponent implements OnInit {
                     { name: 'push', url: 'promote/push' }
                 ]
             },
-            // { name: 'WiBX Day', icon: 'promote' }
+            {
+                name: 'WiBX Day', icon: 'promote',
+                subMenu: [
+                    { name: 'direct-mail', url: 'promote/direct-mail' },
+                    { name: 'push', url: 'promote/push' }
+                ]
+            }
         ];
     }
 
