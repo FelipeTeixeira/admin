@@ -20,6 +20,12 @@ a {
     text-decoration: none;
 }
 
+button {
+    &:focus {
+        outline: 0;
+    }
+}
+
 ul {
     list-style: none;
 }

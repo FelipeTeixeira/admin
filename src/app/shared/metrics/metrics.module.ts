@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MetricsComponent } from './metrics/metrics.component';
 
 @NgModule({
-    declarations: [MetricsComponent],
+    declarations: [
+        MetricsComponent
+    ],
     imports: [
         CommonModule
     ],

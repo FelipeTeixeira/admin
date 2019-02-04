@@ -3,13 +3,12 @@
 .nav {
     display: flex;
     justify-content: center;
-    margin: 64px 0;
 
     &-item {
         text-align: center;
         color: #fff;
         flex: 1;
-        max-width: 220px;
+        max-width: 240px;
         margin: 0 16px;
         border-radius: 4px;
         padding: $space-side;

@@ -7,6 +7,7 @@ import { DashboardMainComponent } from './dashboard-main/dashboard-main.componen
 import { DashboardReportComponent } from './dashboard-report/dashboard-report.component';
 // tslint:disable-next-line:max-line-length
 import { DashboardReportSocialActivitiesComponent } from './dashboard-report/dashboard-report-social-activities/dashboard-report-social-activities.component';
+import { MetricsModule } from '../shared/metrics/metrics.module';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { DashboardReportSocialActivitiesComponent } from './dashboard-report/das
     imports: [
         CommonModule,
         DashboardRoutingModule,
-        ChartsModule
+        ChartsModule,
+        MetricsModule
     ]
 })
 export class DashboardModule { }

@@ -1,3 +1,186 @@
-<p>
-  product-register works!
-</p>
+<section class="sessionHeader">
+    <h1 class="sessionHeader-title">
+        Produto
+    </h1>
+
+    <button class="btn btn-green">
+        Adicionar Produto
+    </button>
+</section>
+
+<h2 class="subtitle">
+    Lista de produtos <small>(exibindo 7 de 20)</small>
+</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="table-checkbox">
+                <label class="checkbox">
+                    <input type="checkbox">
+                </label>
+            </th>
+            <th>
+                Produto
+            </th>
+            <th class="text-right" width="112">
+                Quantidade
+            </th>
+            <th class="text-right" width="120">
+                Valor
+            </th>
+            <th class="text-right" width="110">
+                Vendidos
+            </th>
+            <th class="text-right" width="126">
+                Avaliações
+            </th>
+            <th width="74">
+                Visível
+            </th>
+            <th width="120">
+                Data
+            </th>
+            <th class="table-action" width="160">
+                Ações
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let item of [1,2,3,4,5,6]; let i = index">
+            <td class="table-checkbox">
+                <label class="checkbox">
+                    <input type="checkbox">
+                </label>
+            </td>
+            <td>
+                <div class="productTable-name">
+                    <img src="/assets/img/teste/1.jpg" alt="" class="productTable-img">
+                    Nome
+                </div>
+            </td>
+            <td class="text-right">
+                <!-- SO PRA ILUSTRAR, pode remover -->
+                {{i ++ 1}}
+            </td>
+            <td class="text-right">
+                R$ 1{{i ++ 1}},00
+            </td>
+            <td class="text-right">
+                10{{i ++ 1}}
+            </td>
+            <td>
+                <div class="table-star">
+                    <svg class="icon icon-star isActive">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star isActive">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star isActive">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                </div>
+            </td>
+            <td>
+                Sim
+            </td>
+            <td>
+                25/03/2019
+            </td>
+            <td class="table-action">
+
+                <button class="table-action-btn" tooltip="Editar Produto">
+                    <svg class="icon icon-edit">
+                        <use xlink:href="#icon-edit"></use>
+                    </svg>
+                </button>
+
+                <button class="table-action-btn" tooltip="Pausar Produto">
+                    <svg class="icon icon-pause">
+                        <use xlink:href="#icon-pause"></use>
+                    </svg>
+                </button>
+
+                <button class="table-action-btn" tooltip="Excluir Produto">
+                    <svg class="icon icon-delete">
+                        <use xlink:href="#icon-delete"></use>
+                    </svg>
+                </button>
+            </td>
+        </tr>
+
+        <tr class="tr-isCheckbox">
+            <td class="table-checkbox">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                </label>
+            </td>
+            <td>
+                <img src="/assets/img/teste/1.jpg" alt="" class="productTable-img">
+                Nome Produto
+            </td>
+            <td class="text-right">
+                <!-- SO PRA ILUSTRAR, pode remover -->
+                {{i ++ 1}}
+            </td>
+            <td class="text-right">
+                R$ 1{{i ++ 1}},00
+            </td>
+            <td class="text-right">
+                10{{i ++ 1}}
+            </td>
+            <td>
+                <div class="table-star">
+                    <svg class="icon icon-star isActive">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star isActive">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star isActive">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                </div>
+            </td>
+            <td>
+                Sim
+            </td>
+            <td>
+                25/03/2019
+            </td>
+            <td class="table-action">
+
+                <button class="table-action-btn" tooltip="Editar Produto">
+                    <svg class="icon icon-edit">
+                        <use xlink:href="#icon-edit"></use>
+                    </svg>
+                </button>
+
+                <button class="table-action-btn" tooltip="Pausar Produto">
+                    <svg class="icon icon-pause">
+                        <use xlink:href="#icon-pause"></use>
+                    </svg>
+                </button>
+
+                <button class="table-action-btn" tooltip="Excluir Produto">
+                    <svg class="icon icon-delete">
+                        <use xlink:href="#icon-delete"></use>
+                    </svg>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
