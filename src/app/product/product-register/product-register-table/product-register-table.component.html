@@ -7,11 +7,19 @@
     <div class="table-header">
         0 de 10 selecionado
 
+        <mat-form-field class="table-header-actions">
 
+            <mat-select placeholder="Ações em massa">
+                <mat-option value="pause">Pausar</mat-option>
+                <mat-option value="delete">Excluir</mat-option>
+            </mat-select>
+        </mat-form-field>
 
-
-
-
+        <mat-form-field class="table-header-search">
+            <mat-label>Buscar produto</mat-label>
+            <mat-icon matSuffix>search</mat-icon>
+            <input matInput placeholder="Digite seu termo de busca">
+        </mat-form-field>
     </div>
 
     <table mat-table [dataSource]="dataSource">

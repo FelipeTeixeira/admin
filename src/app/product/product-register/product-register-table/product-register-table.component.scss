@@ -1,8 +1,19 @@
 @import "variables";
 
 .table-header {
-    padding: 12px 24px;
+    padding: 0 24px;
     display: flex;
+    align-items: center;
+
+    &-search {
+        max-width: 200px;
+        margin-left: auto;
+    }
+
+    &-actions {
+         max-width: 200px;
+         margin-left: 26px;
+    }
 }
 
 .productTable {
