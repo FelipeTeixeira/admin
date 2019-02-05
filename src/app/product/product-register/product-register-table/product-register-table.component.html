@@ -1,142 +1,154 @@
-
 <h2 class="subtitle">
     Lista de produtos <small>(exibindo 7 de 20)</small>
 </h2>
 
-<table mat-table [dataSource]="dataSource">
 
-    <!-- Checkbox Column -->
-    <!-- SELECT COLUMN -->
-    <ng-container matColumnDef="select">
-        <th mat-header-cell *matHeaderCellDef class="table-checkbox">
-            <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
-                [indeterminate]="selection.hasValue() && !isAllSelected()">
-            </mat-checkbox>
-        </th>
-        <td mat-cell *matCellDef="let row">
-            <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)">
-            </mat-checkbox>
-        </td>
-    </ng-container>
-
-    <!-- PRODUCT COLUMN -->
-    <ng-container matColumnDef="product">
-        <th mat-header-cell *matHeaderCellDef>
-            Produto
-        </th>
-        <td mat-cell *matCellDef="let element">
-            <div class="productTable-name">
-                <img src="/assets/img/teste/1.jpg" alt="" class="productTable-img">
-                {{element.product}}
-            </div>
-        </td>
-    </ng-container>
-
-    <!-- QUANTITY COLUMN -->
-    <ng-container matColumnDef="quantity">
-        <th mat-header-cell *matHeaderCellDef width="112">
-            Quantidade
-        </th>
-        <td mat-cell *matCellDef="let element">
-            {{element.quantity}}
-        </td>
-    </ng-container>
-
-    <!-- VALUE COLUMN -->
-    <ng-container matColumnDef="value">
-        <th mat-header-cell *matHeaderCellDef width="120">
-            Valor
-        </th>
-        <td mat-cell *matCellDef="let element">
-            {{element.value}}
-        </td>
-    </ng-container>
-
-    <!-- SOLD COLUMN -->
-    <ng-container matColumnDef="sold">
-        <th mat-header-cell *matHeaderCellDef width="110">
-            Vendidos
-        </th>
-        <td mat-cell *matCellDef="let element">
-            {{element.sold}}
-        </td>
-    </ng-container>
-
-    <!-- ASSESSMENTS COLUMN -->
-    <ng-container matColumnDef="assessments">
-        <th mat-header-cell *matHeaderCellDef width="126">
-            Avaliações
-        </th>
-        <td mat-cell *matCellDef="let element">
-            <!-- TO DO, pensar melhor maneira pra integrar -->
-            <!-- {{element.assessments}} -->
-
-            <div class="productTable-star">
-                <svg class="icon icon-star isActive">
-                    <use xlink:href="#icon-star"></use>
-                </svg>
-                <svg class="icon icon-star isActive">
-                    <use xlink:href="#icon-star"></use>
-                </svg>
-                <svg class="icon icon-star isActive">
-                    <use xlink:href="#icon-star"></use>
-                </svg>
-                <svg class="icon icon-star">
-                    <use xlink:href="#icon-star"></use>
-                </svg>
-                <svg class="icon icon-star">
-                    <use xlink:href="#icon-star"></use>
-                </svg>
-            </div>
-        </td>
-    </ng-container>
-
-    <!-- VISIBLE COLUMN -->
-    <ng-container matColumnDef="visible">
-        <th mat-header-cell *matHeaderCellDef width="74">
-            Visível
-        </th>
-        <td mat-cell *matCellDef="let element">
-            {{element.visible}}
-        </td>
-    </ng-container>
-
-    <!-- DATE COLUMN -->
-    <ng-container matColumnDef="date">
-        <th mat-header-cell *matHeaderCellDef width="120">
-            Data
-        </th>
-        <td mat-cell *matCellDef="let element">
-            {{element.date}}
-        </td>
-    </ng-container>
-
-    <!-- ACTIONS COLUMN -->
-    <ng-container matColumnDef="actions">
-        <th mat-header-cell *matHeaderCellDef width="180" class="table-action">
-            Ações
-        </th>
-
-        <td mat-cell *matCellDef="let element" class="table-action">
-
-            <button mat-flat-button class="btn-circle" matTooltip="Editar Produto">
-                <mat-icon>edit</mat-icon>
-            </button>
-
-            <button mat-flat-button class="btn-circle" matTooltip="Pausar Produto">
-                <mat-icon>pause</mat-icon>
-            </button>
-
-            <button mat-flat-button class="btn-circle" matTooltip="Excluir Produto">
-                <mat-icon>delete</mat-icon>
-            </button>
-        </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
-    </tr>
-</table>
+<mat-card class="nopadding">
+    <div class="table-header">
+        0 de 10 selecionado
 
 
-<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+
+
+
+    </div>
+
+    <table mat-table [dataSource]="dataSource">
+
+        <!-- Checkbox Column -->
+        <!-- SELECT COLUMN -->
+        <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef class="table-checkbox">
+                <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+                    [indeterminate]="selection.hasValue() && !isAllSelected()">
+                </mat-checkbox>
+            </th>
+            <td mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                    [checked]="selection.isSelected(row)">
+                </mat-checkbox>
+            </td>
+        </ng-container>
+
+        <!-- PRODUCT COLUMN -->
+        <ng-container matColumnDef="product">
+            <th mat-header-cell *matHeaderCellDef>
+                Produto
+            </th>
+            <td mat-cell *matCellDef="let element">
+                <div class="productTable-name">
+                    <img src="/assets/img/teste/1.jpg" alt="" class="productTable-img">
+                    {{element.product}}
+                </div>
+            </td>
+        </ng-container>
+
+        <!-- QUANTITY COLUMN -->
+        <ng-container matColumnDef="quantity">
+            <th mat-header-cell *matHeaderCellDef width="112">
+                Quantidade
+            </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.quantity}}
+            </td>
+        </ng-container>
+
+        <!-- VALUE COLUMN -->
+        <ng-container matColumnDef="value">
+            <th mat-header-cell *matHeaderCellDef width="120">
+                Valor
+            </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.value}}
+            </td>
+        </ng-container>
+
+        <!-- SOLD COLUMN -->
+        <ng-container matColumnDef="sold">
+            <th mat-header-cell *matHeaderCellDef width="110">
+                Vendidos
+            </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.sold}}
+            </td>
+        </ng-container>
+
+        <!-- ASSESSMENTS COLUMN -->
+        <ng-container matColumnDef="assessments">
+            <th mat-header-cell *matHeaderCellDef width="126">
+                Avaliações
+            </th>
+            <td mat-cell *matCellDef="let element">
+                <!-- TO DO, pensar melhor maneira pra integrar -->
+                <!-- {{element.assessments}} -->
+
+                <div class="productTable-star">
+                    <svg class="icon icon-star isActive">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star isActive">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star isActive">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                        <use xlink:href="#icon-star"></use>
+                    </svg>
+                </div>
+            </td>
+        </ng-container>
+
+        <!-- VISIBLE COLUMN -->
+        <ng-container matColumnDef="visible">
+            <th mat-header-cell *matHeaderCellDef width="74">
+                Visível
+            </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.visible}}
+            </td>
+        </ng-container>
+
+        <!-- DATE COLUMN -->
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef width="120">
+                Data
+            </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.date}}
+            </td>
+        </ng-container>
+
+        <!-- ACTIONS COLUMN -->
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef width="180" class="table-action">
+                Ações
+            </th>
+
+            <td mat-cell *matCellDef="let element" class="table-action">
+
+                <button mat-flat-button class="btn-circle" matTooltip="Editar Produto">
+                    <mat-icon>edit</mat-icon>
+                </button>
+
+                <button mat-flat-button class="btn-circle" matTooltip="Pausar Produto">
+                    <mat-icon>pause</mat-icon>
+                </button>
+
+                <button mat-flat-button class="btn-circle" matTooltip="Excluir Produto">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+        </tr>
+    </table>
+
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</mat-card>

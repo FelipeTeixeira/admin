@@ -1,5 +1,10 @@
 @import "variables";
 
+.table-header {
+    padding: 12px 24px;
+    display: flex;
+}
+
 .productTable {
     &-img {
         max-width: 50px;

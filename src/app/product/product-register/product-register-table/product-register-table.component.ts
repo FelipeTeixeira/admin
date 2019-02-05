@@ -27,6 +27,7 @@ export class ProductRegisterTableComponent implements OnInit {
     displayedColumns: string[] = ['select', 'product', 'quantity', 'value', 'sold', 'assessments', 'visible', 'date', 'actions'];
     dataSource = new MatTableDataSource<ProductInterface>(TABLE_DATA);
     selection = new SelectionModel<ProductInterface>(true, []);
+    selected;
 
     constructor() { }
 
@@ -38,6 +39,7 @@ export class ProductRegisterTableComponent implements OnInit {
     isAllSelected() {
         const numSelected = this.selection.selected.length;
         const numRows = this.dataSource.data.length;
+        this.selected = numRows;
         return numSelected === numRows;
     }
 

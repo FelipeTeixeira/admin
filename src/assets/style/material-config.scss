@@ -114,10 +114,6 @@ $secondary-typography: mat-typography-config(
     padding: 0 8px;
 }
 
-.mat-paginator {
-    background-color: $color-bg;
-}
-
 // TABLE
 .mat-table {
     td.mat-cell,
@@ -125,7 +121,6 @@ $secondary-typography: mat-typography-config(
     th.mat-header-cell {
         font-size: 16px;
         color: $color-black;
-        border-bottom: 8px solid $color-bg;
         padding: 8px;
     }
 
@@ -135,10 +130,6 @@ $secondary-typography: mat-typography-config(
         &:hover {
             background-color: #fafafa;
         }
-    }
-
-    th.mat-header-cell {
-        background-color: $color-bg;
     }
 }
 
