@@ -4,10 +4,8 @@
 
         <div class="metrics card">
 
-            <span *ngIf="metric.percentage" class="metrics-help" tooltip="Desde o útimo mês">
-                <svg class="icon icon-help">
-                    <use xlink:href="#icon-help"></use>
-                </svg>
+            <span *ngIf="metric.percentage" class="metrics-help" matTooltip="Desde o útimo mês">
+                <mat-icon [inline]="true">help_outline</mat-icon>
             </span>
 
             <span class="metrics-icon" [ngClass]="'icon-' + metric.icon">
@@ -23,7 +21,7 @@
                 {{metric.val}}
             </strong>
 
-            <small *ngIf="metric.percentage" tooltip="Desde o útimo mês">
+            <small *ngIf="metric.percentage" matTooltip="Desde o útimo mês">
                 <span class="metrics-details"
                     [ngClass]="{
                         'metrics-details-up': metric.isUp,
@@ -33,7 +31,7 @@
                 </span>
             </small>
 
-            <small *ngIf="metric.totalWibx" tooltip="Valor total disponível" class="metrics-details">
+            <small *ngIf="metric.totalWibx" matTooltip="Valor total disponível" class="metrics-details">
                 <span class="metrics-details-total">
                     Total:
                 </span>

@@ -1,0 +1,15 @@
+.modal-register {
+    &-upload {
+        margin: 24px 0;
+    }
+}
+
+::ng-deep {
+    .modal-register {
+        .mat-radio-group {
+            margin: 12px 0 24px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

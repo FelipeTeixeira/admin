@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { MaterialModule } from '../material/material.module';
+
 import { MetricsComponent } from './metrics/metrics.component';
 
 @NgModule({
@@ -7,7 +10,8 @@ import { MetricsComponent } from './metrics/metrics.component';
         MetricsComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        MaterialModule
     ],
     exports: [
         MetricsComponent

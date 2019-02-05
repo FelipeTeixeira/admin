@@ -1,11 +1,12 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "material-config";
 @import "variables";
 @import "reset";
 @import "grid/bootstrap-grid";
-@import "tooltip";
 
 .subtitle {
     font-size: 16px;
-    margin: 16px 0 8px;
+    margin: 16px 0;
 
     small {
         font-size: 12px;
@@ -27,89 +28,17 @@
     }
 }
 
-.table {
+table {
     width: 100%;
-    border-collapse: collapse;
+}
 
-    thead {
-        tr {
-            background-color: transparent;
-
-            th {
-                border-bottom: 4px solid #eee;
-            }
-        }
-    }
-
-    th {
-        text-align: left;
+.table {
+    &-action {
+        text-align: center !important;
     }
 
     &-checkbox {
-        width: 44px;
-    }
-
-    tr {
-        background-color: #fff;
-        transition: background-color 0.2s ease;
-
-        border-top: 6px solid $color-bg;
-        border-bottom: 6px solid $color-bg;
-
-        &:hover {
-            background-color: $color-bg;
-        }
-
-        &.tr-isCheckbox {
-            background-color: #ebf9ea;
-        }
-    }
-
-    th,
-    td {
-        // border: none;
-        padding: 8px 12px;
-
-        &:first-child {
-            padding-left: $space-side;
-        }
-
-        &:last-child {
-            padding-right: $space-side;
-        }
-    }
-
-    &-action {
-        text-align: right;
-
-        &-btn {
-            font-size: 18px;
-            border-radius: 50%;
-            @include square(40px);
-            background: #fff;
-            border: 2px solid #eee;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            + .table-action-btn {
-                margin-left: 6px;
-            }
-        }
-    }
-
-    &-star {
-        display: flex;
-        justify-content: flex-end;
-
-        .icon {
-            margin-right: 4px;
-
-            &.isActive {
-                color: $color-yellow;
-            }
-        }
+        width: 52px;
     }
 }
 
@@ -118,45 +47,8 @@
     text-align: right !important;
 }
 
-$checkboxSize: 30px;
-.checkbox {
-    display: inline-block;
-    @include square($checkboxSize);
-    position: relative;
-
-    input {
-        width: 0;
-        height: 0;
-
-        &::after {
-            @include pseudo();
-            @include square($checkboxSize);
-            background: url("./assets/img/icons/checkbox.svg");
-            cursor: pointer;
-            transition: background 0.2s ease;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        &:checked {
-            &::after {
-                background: url("./assets/img/icons/checkbox-checked.svg");
-            }
-        }
-    }
-}
-
 // BTN
 .btn {
-    font-family: $font;
-    font-size: 14px;
-    padding: 0 16px;
-    border-radius: 4px;
-    border: none;
-    height: 32px;
-    min-width: 110px;
-
     &-green {
         color: #fff;
         background-color: $color-green;
@@ -171,4 +63,8 @@ $checkboxSize: 30px;
         font-size: 28px;
         margin-right: auto;
     }
+}
+
+.nopadding {
+    padding: 0 !important;
 }

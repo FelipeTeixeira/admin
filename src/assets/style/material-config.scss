@@ -1,0 +1,192 @@
+// https://medium.com/wineofbits/how-to-change-angular-material-theme-in-just-5-minutes-d8719d1f026
+
+@import "~@angular/material/theming";
+@import "variables";
+
+// FONTS
+$general-typography: mat-typography-config(
+    $font-family: $font,
+    $body-2: mat-typography-level(14px, 24px, 600)
+);
+
+$secondary-typography: mat-typography-config(
+    $font-family: $font
+);
+
+// Be sure that you only ever include this mixin once!
+@include mat-core($general-typography);
+
+// CARD
+.mat-card:not([class*="mat-elevation-z"]) {
+    // box-shadow: 0 1px 10px 1px rgba(52, 40, 104, 0.08);
+    box-shadow: none;
+    border: 1px solid #eee;
+}
+
+.mat-card {
+    .mat-card-title {
+        font-size: 18px;
+        color: $color-black;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+
+        .status {
+            margin-left: 8px;
+        }
+    }
+}
+
+// MAT BUTTON
+.mat-primary {
+    &.mat-flat-button,
+    &.mat-raised-button,
+    &.mat-fab,
+    &.mat-mini-fab {
+        background-color: $color-purple;
+    }
+}
+
+.mat-button-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+[mat-flat-button].mat-flat-button,
+[mat-button].mat-button {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 36px;
+
+    .mat-icon {
+        font-size: 22px;
+        margin-right: 2px;
+    }
+
+    // SVG ICON
+    .icon {
+        font-size: 16px;
+        margin-right: 4px;
+        position: relative;
+        top: -1px;
+    }
+}
+
+// DIALOG - MODAL
+.mat-dialog-actions {
+    justify-content: flex-end;
+    min-height: 80px;
+
+    .mat-dialog-btnClose {
+        color: $color-blue;
+        margin-right: auto;
+    }
+}
+
+.mat-dialog-container {
+    position: relative;
+    color: $color-black;
+}
+
+.mat-dialog {
+    &-close {
+        font-size: 16px;
+        color: $color-blue;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+    }
+}
+
+.mat-dialog-title {
+    font-weight: bold;
+    color: $color-black;
+}
+
+.mat-dialog-subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-black;
+    margin: 8px 0;
+}
+
+.mat-dialog-subContent {
+    padding: 0 8px;
+}
+
+.mat-paginator {
+    background-color: $color-bg;
+}
+
+// TABLE
+.mat-table {
+    td.mat-cell,
+    td.mat-footer-cell,
+    th.mat-header-cell {
+        font-size: 16px;
+        color: $color-black;
+        border-bottom: 8px solid $color-bg;
+        padding: 8px;
+    }
+
+    .mat-row {
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: #fafafa;
+        }
+    }
+
+    th.mat-header-cell {
+        background-color: $color-bg;
+    }
+}
+
+.mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
+    background-color: $color-purple;
+}
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: $color-purple;
+}
+
+// TABLE ACTION
+[mat-flat-button].mat-flat-button.btn-circle {
+    border-radius: 50%;
+    @include square(36px);
+    background: #fff;
+    border: 2px solid #eee;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: inherit;
+
+    .mat-icon {
+        font-size: 18px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    + .btn-circle {
+        margin-left: 6px;
+    }
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+// SLIDE TOGGLE
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: $color-purple;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #301457;
+}
+
+// .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle
