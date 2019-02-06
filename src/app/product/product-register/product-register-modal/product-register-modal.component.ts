@@ -7,6 +7,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
     styleUrls: ['./product-register-modal.component.scss']
 })
 export class ProductRegisterModalComponent implements OnInit {
+    type;
 
     constructor(
         public dialogRef: MatDialogRef<ProductRegisterModalComponent>,
