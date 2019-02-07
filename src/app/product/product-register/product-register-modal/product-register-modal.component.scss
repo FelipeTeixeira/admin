@@ -1,6 +1,27 @@
+@import 'variables';
+
 .modal-register {
-    &-upload {
+    &-uploadLote {
         margin: 24px 0;
+    }
+
+    &-uploadImg {
+        font-size: 12px;
+        border: 2px dashed #e7d2ea;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        padding: 12px;
+        background: url(/assets/img/icons/add-photo.svg) no-repeat center center;
+        background-size: 90px;
+        transition: background .2s ease;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: $space-side;
+
+        &:hover {
+            background-color: $color-bg;
+        }
     }
 }
 

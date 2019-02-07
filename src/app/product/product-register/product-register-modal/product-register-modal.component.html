@@ -65,19 +65,31 @@
             </div>
         </div>
 
+        <ul>
+            <li class="modal-register-uploadImg" (click)="inputFileImg.click()">
+                Imagem de Destaque
+                <input type='file' (change)="onSelectImg($event)" #inputFileImg class="hide">
+
+            </li>
+        </ul>
+
         <mat-slide-toggle>Produto ativo</mat-slide-toggle>
     </div>
 
-    <div *ngIf="type === 'lote'" class="modal-register-upload">
-        <button mat-flat-button color="primary">
+    <!-- ADD LOTE -->
+    <div *ngIf="type === 'lote'" class="modal-register-uploadLote">
+
+        <input type="file" name="" id="" #inputFile class="hide">
+
+        <button mat-flat-button color="primary" (click)="inputFile.click()">
             <mat-icon>publish</mat-icon>
             Selecionar Arquivo
         </button>
+
     </div>
 
-
-
 </div>
+
 <div mat-dialog-actions>
     <button mat-button (click)="onNoClick()">
         Cancelar
