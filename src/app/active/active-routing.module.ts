@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ActiveAccessListComponent } from './active-access-list/active-access-list.component';
-import { ActiveRealityComponent } from './active-reality/active-reality.component';
 
 const routes: Routes = [
     {
@@ -11,10 +10,6 @@ const routes: Routes = [
             {
                 path: '',
                 component: ActiveAccessListComponent
-            },
-            {
-                path: 'reality',
-                component: ActiveRealityComponent
             }
         ]
     },

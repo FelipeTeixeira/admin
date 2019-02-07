@@ -38,8 +38,7 @@ export class MenuComponent implements OnInit {
             {
                 name: 'Ativar', icon: 'active',
                 subMenu: [
-                    { name: 'active', url: 'active' },
-                    { name: 'reality', url: 'active/reality' }
+                    { name: 'active', url: 'active' }
                 ]
             },
             {
@@ -53,16 +52,7 @@ export class MenuComponent implements OnInit {
             {
                 name: 'Promover', icon: 'promote',
                 subMenu: [
-                    { name: 'publicity', url: 'promote/publicity' },
-                    { name: 'direct-mail', url: 'promote/direct-mail' },
-                    { name: 'push', url: 'promote/push' }
-                ]
-            },
-            {
-                name: 'WiBX Day', icon: 'promote',
-                subMenu: [
-                    { name: 'direct-mail', url: 'promote/direct-mail' },
-                    { name: 'push', url: 'promote/push' }
+                    { name: 'publicity', url: 'promote/publicity' }
                 ]
             }
         ];
