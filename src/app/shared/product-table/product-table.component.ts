@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatTableDataSource } from '@angular/material';
 
+// APENAS TESTE
 export interface ProductInterface {
     product: string;
     quantity: number;
@@ -17,14 +18,18 @@ const TABLE_DATA: ProductInterface[] = [
     { product: 'iPhone', quantity: 30, value: 1900, sold: 3, assessments: 'assessments', visible: true, date: '25/03/2019' },
     { product: 'Samsung', quantity: 25, value: 700, sold: 10, assessments: 'assessments', visible: true, date: '25/03/2019' }
 ];
+// APENAS TESTE
 
 @Component({
-    selector: 'app-product-register-table',
-    templateUrl: './product-register-table.component.html',
-    styleUrls: ['./product-register-table.component.scss']
+    selector: 'app-product-table',
+    templateUrl: './product-table.component.html',
+    styleUrls: ['./product-table.component.scss']
 })
-export class ProductRegisterTableComponent implements OnInit {
+export class ProductTableComponent implements OnInit {
+    @Input() hideActions = false;
+
     displayedColumns: string[] = ['select', 'product', 'quantity', 'value', 'sold', 'assessments', 'visible', 'date', 'actions'];
+
     dataSource = new MatTableDataSource<ProductInterface>(TABLE_DATA);
     selection = new SelectionModel<ProductInterface>(true, []);
     selected;
@@ -32,6 +37,9 @@ export class ProductRegisterTableComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+        if (this.hideActions) {
+            this.displayedColumns.pop();
+        }
     }
 
 
