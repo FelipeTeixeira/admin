@@ -14,26 +14,14 @@ import {
     MatPaginatorModule,
     MatSelectModule,
     MatSlideToggleModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTabsModule
 } from '@angular/material';
 
 @NgModule({
     declarations: [],
     imports: [
-        CommonModule,
-        MatFormFieldModule,
-        MatDialogModule,
-        MatInputModule,
-        MatButtonModule,
-        MatIconModule,
-        MatTableModule,
-        MatCheckboxModule,
-        MatCardModule,
-        MatPaginatorModule,
-        MatTooltipModule,
-        MatSelectModule,
-        MatSlideToggleModule,
-        MatRadioModule
+        CommonModule
     ],
     exports: [
         MatFormFieldModule,
@@ -48,7 +36,8 @@ import {
         MatTooltipModule,
         MatSelectModule,
         MatSlideToggleModule,
-        MatRadioModule
+        MatRadioModule,
+        MatTabsModule
     ]
 })
 export class MaterialModule { }
