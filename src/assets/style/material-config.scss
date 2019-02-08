@@ -191,3 +191,11 @@ $secondary-typography: mat-typography-config(
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
     border-color: $color-purple;
 }
+
+.mat-tab-labels {
+    .mat-tab-label {
+        font-size: 16px;
+        color: $color-black;
+        opacity: 1;
+    }
+}
