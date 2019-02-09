@@ -1,0 +1,31 @@
+@import "../../../assets/style/variables";
+
+.breadcrumb {
+    font-size: 12px;
+    display: flex;
+    margin-bottom: 8px;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+
+        &:hover {
+            color: $color-blue-dark;
+        }
+
+        &::after {
+            content: ">";
+            margin: 0 6px;
+        }
+    }
+
+    li {
+        &:last-child {
+            a {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

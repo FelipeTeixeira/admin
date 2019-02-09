@@ -9,7 +9,9 @@
             </a>
         </li>
         <li *ngFor="let menu of menuItens; let i = index">
-            <a class="menu-link" (click)="toggleMenu(i)" [ngClass]="{'is-active': menu.isActive}">
+            <a class="menu-link" (click)="toggleMenu(i)"
+                [ngClass]="{'is-active': menu.isActive}"
+                [routerLink]="menu.url">
                 <svg class="icon menu-link-icon">
                     <use attr.xlink:href="#icon-{{menu.icon}}"></use>
                 </svg>

@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>
+    Adicionar Anúncio
+</h1>
+<div mat-dialog-content class="modal-register">
+
+    <mat-form-field appearance="outline">
+        <mat-label>Nome do Anúncio</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput placeholder="Digite a Descrição do anúncio"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>URL de Destino</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <ul>
+        <li class="modal-register-uploadImg" (click)="inputFileImg.click()">
+            Imagem de Destaque
+            <input type='file' (change)="onSelectImg($event)" #inputFileImg class="hide">
+        </li>
+    </ul>
+
+    <mat-slide-toggle>Produto ativo</mat-slide-toggle>
+
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">
+        Cancelar
+    </button>
+
+    <button mat-button class="btn-green">
+        Adicionar Anúncio
+    </button>
+</div>

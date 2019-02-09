@@ -4,6 +4,7 @@
 @import "assets/style/reset";
 @import "assets/style/grid/bootstrap-grid";
 @import "assets/style/card";
+@import "assets/style/table";
 
 .subtitle {
     font-size: 18px;
@@ -12,21 +13,6 @@
 
     small {
         font-size: 12px;
-    }
-}
-
-
-table {
-    width: 100%;
-}
-
-.table {
-    &-action {
-        text-align: center !important;
-    }
-
-    &-checkbox {
-        width: 52px;
     }
 }
 
@@ -73,5 +59,29 @@ table {
     padding: 12px 0;
 }
 
+.status {
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    min-width: 60px;
+
+    &-active {
+        background-color: $color-green;
+    }
+
+    &-expired {
+        background-color: $color-yellow;
+    }
+
+    &-delete {
+        background-color: $color-red;
+    }
+}
 
 
+.margin-bottom-16 {
+    margin-bottom: 16px
+}

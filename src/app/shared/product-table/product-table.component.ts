@@ -3,7 +3,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { MatTableDataSource } from '@angular/material';
 
 // APENAS TESTE
-export interface ProductInterface {
+export interface Product {
     product: string;
     quantity: number;
     value: number;
@@ -11,9 +11,10 @@ export interface ProductInterface {
     assessments: string;
     visible: boolean;
     date: string;
+    discount?: number;
 }
 
-const TABLE_DATA: ProductInterface[] = [
+const TABLE_DATA: Product[] = [
     { product: 'Celular', quantity: 10, value: 1500, sold: 4, assessments: 'assessments', visible: true, date: '25/03/2019' },
     { product: 'iPhone', quantity: 30, value: 1900, sold: 3, assessments: 'assessments', visible: true, date: '25/03/2019' },
     { product: 'Samsung', quantity: 25, value: 700, sold: 10, assessments: 'assessments', visible: true, date: '25/03/2019' }
@@ -27,11 +28,12 @@ const TABLE_DATA: ProductInterface[] = [
 })
 export class ProductTableComponent implements OnInit {
     @Input() hideActions = false;
+    @Input() displayedCustom: string[];
 
     displayedColumns: string[] = ['select', 'product', 'quantity', 'value', 'sold', 'assessments', 'visible', 'date', 'actions'];
 
-    dataSource = new MatTableDataSource<ProductInterface>(TABLE_DATA);
-    selection = new SelectionModel<ProductInterface>(true, []);
+    dataSource = new MatTableDataSource<Product>(TABLE_DATA);
+    selection = new SelectionModel<Product>(true, []);
     selected;
 
     constructor() { }
@@ -39,6 +41,10 @@ export class ProductTableComponent implements OnInit {
     ngOnInit() {
         if (this.hideActions) {
             this.displayedColumns.pop();
+        }
+
+        if (this.displayedCustom) {
+            this.displayedColumns = this.displayedCustom;
         }
     }
 

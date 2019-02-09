@@ -52,12 +52,12 @@ $secondary-typography: mat-typography-config(
 
 [mat-flat-button].mat-flat-button,
 [mat-button].mat-button {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     line-height: 36px;
 
     .mat-icon {
-        font-size: 22px;
+        font-size: 20px;
         margin-right: 2px;
     }
 
@@ -198,4 +198,8 @@ $secondary-typography: mat-typography-config(
         color: $color-black;
         opacity: 1;
     }
+}
+
+.mat-hint {
+    font-size: 12px;
 }

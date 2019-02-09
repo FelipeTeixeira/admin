@@ -1,0 +1,16 @@
+<label for="inputFile" class="upload-text">
+    Selecione arquivo com a lista de usuário que terão acesso a está área exclusiva
+</label>
+
+<div class="upload">
+    <input type="file" name="" id="inputFile" #inputFile class="hide">
+    <input disabled value="arquivo.xsl" class="upload-input">
+
+    <button mat-stroked-button color="primary" (click)="inputFile.click()" class="btn">
+        <mat-icon>publish</mat-icon>
+        Selecionar Arquivo
+    </button>
+</div>
+<mat-hint class="upload-help">
+    Arquivo suportado: .xls / Limite de tamanho: 10mb
+</mat-hint>

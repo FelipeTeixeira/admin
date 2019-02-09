@@ -12,7 +12,6 @@
         </mat-radio-button>
     </mat-radio-group>
 
-
     <div *ngIf="type === 'manual'">
         <mat-form-field appearance="outline">
             <mat-label>Nome do Produto</mat-label>
@@ -65,13 +64,7 @@
             </div>
         </div>
 
-        <ul>
-            <li class="modal-register-uploadImg" (click)="inputFileImg.click()">
-                Imagem de Destaque
-                <input type='file' (change)="onSelectImg($event)" #inputFileImg class="hide">
-
-            </li>
-        </ul>
+        <app-image-cover></app-image-cover>
 
         <mat-slide-toggle>Produto ativo</mat-slide-toggle>
     </div>

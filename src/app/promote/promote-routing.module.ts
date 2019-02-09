@@ -8,7 +8,7 @@ const routes: Routes = [
         path: '',
         children: [
             {
-                path: 'publicity',
+                path: '',
                 component: PromotePublicityComponent
             }
         ]

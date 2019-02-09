@@ -1,0 +1,12 @@
+<ul class="breadcrumb">
+    <li *ngFor="let item of listBreadcrumb">
+        <ng-container *ngIf="item.url; else elseTemplate">
+            <a [routerLink]="item.url">
+                {{item.name}}
+            </a>
+        </ng-container>
+        <ng-template #elseTemplate>
+            {{item.name}}
+        </ng-template>
+    </li>
+</ul>

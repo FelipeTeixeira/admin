@@ -24,7 +24,6 @@
 
     <table mat-table [dataSource]="dataSource">
 
-        <!-- Checkbox Column -->
         <!-- SELECT COLUMN -->
         <ng-container matColumnDef="select">
             <th mat-header-cell *matHeaderCellDef class="table-checkbox">
@@ -33,7 +32,8 @@
                 </mat-checkbox>
             </th>
             <td mat-cell *matCellDef="let row">
-                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                <mat-checkbox (click)="$event.stopPropagation()"
+                    (change)="selection.toggle(row)"
                     [checked]="selection.isSelected(row)">
                 </mat-checkbox>
             </td>
@@ -45,8 +45,8 @@
                 Produto
             </th>
             <td mat-cell *matCellDef="let element">
-                <div class="productTable-name">
-                    <img src="/assets/img/teste/1.jpg" alt="" class="productTable-img">
+                <div class="table-productName">
+                    <img src="/assets/img/teste/1.jpg" alt="" class="table-productImg">
                     {{element.product}}
                 </div>
             </td>
@@ -54,37 +54,37 @@
 
         <!-- QUANTITY COLUMN -->
         <ng-container matColumnDef="quantity">
-            <th mat-header-cell *matHeaderCellDef width="112">
+            <th mat-header-cell *matHeaderCellDef class="text-right">
                 Quantidade
             </th>
-            <td mat-cell *matCellDef="let element">
+            <td mat-cell *matCellDef="let element" class="text-right">
                 {{element.quantity}}
             </td>
         </ng-container>
 
         <!-- VALUE COLUMN -->
         <ng-container matColumnDef="value">
-            <th mat-header-cell *matHeaderCellDef width="120">
+            <th mat-header-cell *matHeaderCellDef class="text-right">
                 Valor
             </th>
-            <td mat-cell *matCellDef="let element">
+            <td mat-cell *matCellDef="let element" class="text-right">
                 {{element.value}}
             </td>
         </ng-container>
 
         <!-- SOLD COLUMN -->
         <ng-container matColumnDef="sold">
-            <th mat-header-cell *matHeaderCellDef width="110">
+            <th mat-header-cell *matHeaderCellDef class="text-right">
                 Vendidos
             </th>
-            <td mat-cell *matCellDef="let element">
+            <td mat-cell *matCellDef="let element" class="text-right">
                 {{element.sold}}
             </td>
         </ng-container>
 
         <!-- ASSESSMENTS COLUMN -->
         <ng-container matColumnDef="assessments">
-            <th mat-header-cell *matHeaderCellDef width="126">
+            <th mat-header-cell *matHeaderCellDef class="text-right">
                 Avaliações
             </th>
             <td mat-cell *matCellDef="let element">
@@ -113,7 +113,7 @@
 
         <!-- VISIBLE COLUMN -->
         <ng-container matColumnDef="visible">
-            <th mat-header-cell *matHeaderCellDef width="74">
+            <th mat-header-cell *matHeaderCellDef>
                 Visível
             </th>
             <td mat-cell *matCellDef="let element">
@@ -123,7 +123,7 @@
 
         <!-- DATE COLUMN -->
         <ng-container matColumnDef="date">
-            <th mat-header-cell *matHeaderCellDef width="120">
+            <th mat-header-cell *matHeaderCellDef>
                 Data
             </th>
             <td mat-cell *matCellDef="let element">
@@ -131,9 +131,21 @@
             </td>
         </ng-container>
 
+        <!-- DISCOUNT COLUMN -->
+        <ng-container matColumnDef="discount">
+            <th mat-header-cell *matHeaderCellDef width="170">
+                Desconto
+            </th>
+            <td mat-cell *matCellDef="let element" class="productTable-discount">
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Desconto">
+                </mat-form-field>
+            </td>
+        </ng-container>
+
         <!-- ACTIONS COLUMN -->
         <ng-container matColumnDef="actions">
-            <th mat-header-cell *matHeaderCellDef width="180" class="table-action">
+            <th mat-header-cell *matHeaderCellDef class="table-action" width="164">
                 Ações
             </th>
 
@@ -154,7 +166,7 @@
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'table-tr-isActive': selection.isSelected(row)}">
         </tr>
     </table>
 

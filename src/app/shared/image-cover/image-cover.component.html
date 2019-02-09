@@ -1,0 +1,5 @@
+<div class="uploadCover" (click)="inputFileImg.click()">
+    <input type='file' (change)="onSelectImg($event)" #inputFileImg class="hide">
+
+    <img [src]="imageSrc" class="uploadCover-img" *ngIf="imageSrc">
+</div>

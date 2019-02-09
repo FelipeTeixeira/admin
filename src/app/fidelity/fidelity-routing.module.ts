@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { FidelityEngagementComponent } from './fidelity-engagement/fidelity-engagement.component';
 import { FidelityBuyWinComponent } from './fidelity-buy-win/fidelity-buy-win.component';
 import { FidelityCuponsComponent } from './fidelity-cupons/fidelity-cupons.component';
+// tslint:disable-next-line:max-line-length
+import { FidelityBuyWinCreateProgramComponent } from './fidelity-buy-win/fidelity-buy-win-create-program/fidelity-buy-win-create-program.component';
 
 const routes: Routes = [
     {
@@ -16,6 +18,10 @@ const routes: Routes = [
             {
                 path: 'buy-win',
                 component: FidelityBuyWinComponent
+            },
+            {
+                path: 'buy-win/create',
+                component: FidelityBuyWinCreateProgramComponent
             },
             {
                 path: 'cupons',

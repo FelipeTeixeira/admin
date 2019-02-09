@@ -29,17 +29,10 @@ export class MenuComponent implements OnInit {
                 ]
             },
             {
-                name: 'Produtos', icon: 'product',
-                subMenu: [
-                    { name: 'register', url: 'product/register' },
-                    { name: 'list', url: 'product/list' }
-                ]
+                name: 'Produtos', icon: 'product', url: 'product'
             },
             {
-                name: 'Ativar', icon: 'active',
-                subMenu: [
-                    { name: 'active', url: 'active' }
-                ]
+                name: 'Ativar', icon: 'active', url: 'active'
             },
             {
                 name: 'Fidelizar', icon: 'fidelity',
@@ -50,10 +43,7 @@ export class MenuComponent implements OnInit {
                 ]
             },
             {
-                name: 'Promover', icon: 'promote',
-                subMenu: [
-                    { name: 'publicity', url: 'promote/publicity' }
-                ]
+                name: 'Promover', icon: 'promote', url: 'promote'
             }
         ];
     }

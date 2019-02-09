@@ -1,0 +1,123 @@
+<div class="program">
+    <app-breadcrumbs [listBreadcrumb]="listBreadcrumb"></app-breadcrumbs>
+
+    <h1 class="sessionHeader-title margin-bottom-16">
+        Criar Programa
+    </h1>
+
+    <mat-card>
+        <mat-horizontal-stepper #stepper>
+
+            <!-- STEP 1 -->
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>
+                        Programa
+                    </ng-template>
+
+                    <h2 class="step-subtitle">
+                        Informações do Programa
+                    </h2>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nome do Programa</mat-label>
+                        <input matInput cdkFocusInitial>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Descrição</mat-label>
+                        <textarea matInput placeholder="Digite a Descrição do Programa"></textarea>
+                    </mat-form-field>
+
+                    <mat-slide-toggle class="margin-bottom-16">
+                        Exibir apenas ofertas do programa
+                    </mat-slide-toggle>
+
+                    <strong class="program-subtitle">
+                        Imagens do Programa <small>(opcional)</small>
+                    </strong>
+
+                    <p class="program-description">
+                        Você pode usar uma capa e logo alternativo para
+                        sua nova área se quiser manter seu mesmo logo basta deixar esses campos vazios.
+                    </p>
+
+                    <p class="program-cover">
+                        Capa Alterantiva <small>(campo opcional)</small>
+                    </p>
+
+                    <app-image-cover></app-image-cover>
+
+                    <p class="program-cover">
+                        Logo Alterantivo <small>(campo opcional)</small>
+                    </p>
+
+                    <app-image-cover class="program-logoCover"></app-image-cover>
+
+                    <div class="program-step">
+                        <button mat-flat-button color="primary" matStepperNext class="program-step-btn">
+                            Continuar
+                        </button>
+                    </div>
+                </form>
+            </mat-step>
+
+            <!-- STEP 2 -->
+            <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>
+                        Membros
+                    </ng-template>
+
+                    <h2 class="step-subtitle">
+                        Selecione Membros para o Programa
+                    </h2>
+
+                    <!-- DEPOIS passar para translate -->
+                    <app-upload text="Selecione arquivo com a lista de usuário que terão acesso a está área exclusiva">
+
+                    </app-upload>
+
+                    <div class="program-step">
+                        <button mat-stroked-button color="primary" matStepperPrevious>
+                            Voltar
+                        </button>
+                        <button mat-flat-button color="primary" matStepperNext class="program-step-btn">
+                            Continuar
+                        </button>
+                    </div>
+                </form>
+            </mat-step>
+
+            <!-- STEP 3 -->
+            <mat-step>
+                <ng-template matStepLabel>
+                    Produtos
+                </ng-template>
+
+                <h2 class="step-subtitle">
+                    Adicione produtos para o Programa
+                </h2>
+                <p>
+                    Marque os produtos que farão parte de sua área exclusiva,
+                    somente usuários que você selecionou poderão ver essas ofertas.
+                </p>
+
+                <form [formGroup]="thirdFormGroup">
+                    <app-product-table [hideActions]="true" [displayedCustom]="displayedCustom">
+
+                    </app-product-table>
+                </form>
+
+                <div class="program-step">
+                    <button mat-stroked-button color="primary" matStepperPrevious>
+                        Voltar
+                    </button>
+                    <button mat-flat-button color="primary" matStepperNext class="program-step-btn">
+                        Criar Programa
+                    </button>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+    </mat-card>
+</div>

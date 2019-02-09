@@ -1,0 +1,51 @@
+table {
+    width: 100%;
+}
+
+.table {
+    &-header {
+        padding: 0 24px;
+        display: flex;
+        align-items: center;
+
+        &-search {
+            max-width: 200px;
+            margin-left: auto;
+        }
+
+        &-actions {
+            max-width: 200px;
+            margin-left: 26px;
+        }
+    }
+
+    &-action {
+        text-align: center !important;
+    }
+
+    &-checkbox {
+        width: 52px;
+    }
+
+    &-tr-isActive {
+        background: #F7F4FD !important;
+    }
+
+    &-productName {
+        margin: 4px 0;
+    }
+
+    &-productImg {
+        max-width: 50px;
+        max-height: 50px;
+        padding: 4px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        margin-right: 8px;
+    }
+
+    &-productName {
+        display: flex;
+        align-items: center;
+    }
+}
