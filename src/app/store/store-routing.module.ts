@@ -5,6 +5,7 @@ import { StorePersonalizeComponent } from './store-personalize/store-personalize
 import { StoreUnitsComponent } from './store-units/store-units.component';
 import { StorePermissionsComponent } from './store-permissions/store-permissions.component';
 import { StoreBookingComponent } from './store-booking/store-booking.component';
+import { StoreUnitsAddComponent } from './store-units/store-units-add/store-units-add.component';
 
 const routes: Routes = [
     {
@@ -17,6 +18,10 @@ const routes: Routes = [
             {
                 path: 'units',
                 component: StoreUnitsComponent
+            },
+            {
+                path: 'units/add',
+                component: StoreUnitsAddComponent
             },
             {
                 path: 'permissions',

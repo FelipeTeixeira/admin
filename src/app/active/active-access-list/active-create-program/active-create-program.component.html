@@ -1,4 +1,4 @@
-<div class="program">
+<div class="program container">
     <app-breadcrumbs [listBreadcrumb]="listBreadcrumb"></app-breadcrumbs>
 
     <h1 class="sessionHeader-title margin-bottom-16">
@@ -15,7 +15,7 @@
                         Programa
                     </ng-template>
 
-                    <h2 class="step-subtitle">
+                    <h2 class="formGroupTitle">
                         Informações do Programa
                     </h2>
 
@@ -54,8 +54,8 @@
 
                     <app-image-cover class="program-logoCover"></app-image-cover>
 
-                    <div class="program-step">
-                        <button mat-flat-button color="primary" matStepperNext class="program-step-btn">
+                    <div class="formAction">
+                        <button mat-flat-button color="primary" matStepperNext class="formAction-btn">
                             Continuar
                         </button>
                     </div>
@@ -69,7 +69,7 @@
                         Membros
                     </ng-template>
 
-                    <h2 class="step-subtitle">
+                    <h2 class="formGroupTitle">
                         Selecione Membros para o Programa
                     </h2>
 
@@ -78,11 +78,11 @@
 
                     </app-upload>
 
-                    <div class="program-step">
+                    <div class="formAction">
                         <button mat-stroked-button color="primary" matStepperPrevious>
                             Voltar
                         </button>
-                        <button mat-flat-button color="primary" matStepperNext class="program-step-btn">
+                        <button mat-flat-button color="primary" matStepperNext class="formAction-btn">
                             Continuar
                         </button>
                     </div>
@@ -95,7 +95,7 @@
                     Produtos
                 </ng-template>
 
-                <h2 class="step-subtitle">
+                <h2 class="formGroupTitle">
                     Adicione produtos para o Programa
                 </h2>
                 <p>
@@ -109,11 +109,11 @@
                     </app-product-table>
                 </form>
 
-                <div class="program-step">
+                <div class="formAction">
                     <button mat-stroked-button color="primary" matStepperPrevious>
                         Voltar
                     </button>
-                    <button mat-flat-button color="primary" matStepperNext class="program-step-btn">
+                    <button mat-flat-button color="primary" matStepperNext class="formAction-btn">
                         Criar Programa
                     </button>
                 </div>

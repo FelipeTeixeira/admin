@@ -1,3 +1,27 @@
-<p>
-  store-units works!
-</p>
+<section class="sessionHeader">
+    <div class="sessionHeader-content">
+        <h1 class="sessionHeader-title">
+            Unidades
+        </h1>
+        <p class="sessionHeader-subtitle">
+            Cadastre novas unidades de sua loja.
+            <br>
+            Você pode delegar responsabilidades a pessoas especifícas
+            para que possam gerenciar suas unidades clicando em
+            <a routerLink="/store/permissions" class="decoration">
+                <strong>
+                    Permissões
+                </strong>
+            </a>
+        </p>
+    </div>
+
+    <button mat-flat-button color="primary" routerLink="/store/units/add">
+        <mat-icon>add</mat-icon>
+        Cadastrar Unidade
+    </button>
+</section>
+
+<section>
+    <app-store-units-table></app-store-units-table>
+</section>

@@ -8,7 +8,7 @@ import { Breadcrumb } from 'src/app/shared/breadcrumbs/breadcrumb.interface';
 })
 export class ActiveCreateProgramComponent implements OnInit {
     listBreadcrumb: Breadcrumb[] = [
-        { name: 'Acesso Exclusivo - Lista de Programas', url: '/active' },
+        { name: 'Lista de Programas', url: '/active' },
         { name: 'Criar Programa' }
     ];
 

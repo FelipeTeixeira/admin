@@ -6,12 +6,23 @@ import { StorePersonalizeComponent } from './store-personalize/store-personalize
 import { StoreUnitsComponent } from './store-units/store-units.component';
 import { StorePermissionsComponent } from './store-permissions/store-permissions.component';
 import { StoreBookingComponent } from './store-booking/store-booking.component';
+import { SharedModule } from '../shared/shared.module';
+import { StoreUnitsTableComponent } from './store-units/store-units-table/store-units-table.component';
+import { StoreUnitsAddComponent } from './store-units/store-units-add/store-units-add.component';
 
 @NgModule({
-  declarations: [StorePersonalizeComponent, StoreUnitsComponent, StorePermissionsComponent, StoreBookingComponent],
-  imports: [
-    CommonModule,
-    StoreRoutingModule
-  ]
+    declarations: [
+        StorePersonalizeComponent,
+        StoreUnitsComponent,
+        StorePermissionsComponent,
+        StoreBookingComponent,
+        StoreUnitsTableComponent,
+        StoreUnitsAddComponent
+    ],
+    imports: [
+        CommonModule,
+        StoreRoutingModule,
+        SharedModule
+    ]
 })
 export class StoreModule { }
