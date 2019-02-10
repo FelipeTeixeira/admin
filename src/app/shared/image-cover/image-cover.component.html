@@ -1,3 +1,9 @@
+<p class="uploadCover-text">
+    {{text}}
+
+    <small *ngIf="isOptional">(campo opcional)</small>
+</p>
+
 <div class="uploadCover" (click)="inputFileImg.click()">
     <input type='file' (change)="onSelectImg($event)" #inputFileImg class="hide">
 

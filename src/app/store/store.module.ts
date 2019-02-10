@@ -10,6 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 import { StoreUnitsTableComponent } from './store-units/store-units-table/store-units-table.component';
 import { StoreUnitsAddComponent } from './store-units/store-units-add/store-units-add.component';
 import { StorePermissionsTableComponent } from './store-permissions/store-permissions-table/store-permissions-table.component';
+import { StoreColorsComponent } from './store-personalize/store-colors/store-colors.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { StorePermissionsTableComponent } from './store-permissions/store-permis
         StoreBookingComponent,
         StoreUnitsTableComponent,
         StoreUnitsAddComponent,
-        StorePermissionsTableComponent
+        StorePermissionsTableComponent,
+        StoreColorsComponent
     ],
     imports: [
         CommonModule,

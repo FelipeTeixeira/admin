@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
     selector: 'app-image-cover',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./image-cover.component.scss']
 })
 export class ImageCoverComponent implements OnInit {
+    @Input() text: string;
+    @Input() isOptional = false;
     imageSrc;
 
     constructor() { }

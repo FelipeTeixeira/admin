@@ -1,0 +1,23 @@
+@import "../../../../assets/style/variables";
+
+$color-list: (
+    (black, #000),
+    (red, #991811),
+    (green, green),
+    (yellow, yellow),
+    (blue, blue),
+    (orange, orange)
+);
+
+.square {
+    @include square(20px);
+    display: inline-block;
+    border-radius: 4px;
+    margin-right: 12px;
+
+    @each $label, $color in $color-list {
+        &-#{$label} {
+            background: $color;
+        }
+    }
+}

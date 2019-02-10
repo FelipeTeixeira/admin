@@ -1,3 +1,135 @@
-<p>
-  store-personalize works!
-</p>
+<section class="sessionHeader">
+    <div class="sessionHeader-content">
+        <h1 class="sessionHeader-title">
+            Personalizar Loja
+        </h1>
+        <p class="sessionHeader-subtitle">
+            Aqui você edita as característica de sua loja.
+
+            <span class="breakLine">
+                Caso queira cadastrar dados de contato ou localização
+                de outras unidades vá para a opção
+                <a routerLink="/store/units" class="decoration">
+                    <strong>
+                        Unidades
+                    </strong>
+                </a>
+            </span>
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="program container">
+
+        <mat-card>
+            <h2 class="formGroupTitle">
+                Dados da Unidade
+            </h2>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Nome da Loja</mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Descrição da Loja</mat-label>
+                <textarea matInput placeholder="Digite a Descrição da Loja"></textarea>
+            </mat-form-field>
+
+            <h2 class="formGroupTitle">
+                Contato
+            </h2>
+
+            <div class="row">
+                <mat-form-field appearance="outline" class="col-sm-6">
+                    <mat-label>E-mail</mat-label>
+                    <input matInput type="email">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="col-sm-6">
+                    <mat-label>Web Site</mat-label>
+                    <input matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="col-sm-6">
+                    <mat-label>Telefone</mat-label>
+                    <input matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="col-sm-6">
+                    <mat-label>WhatsApp</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+
+            <h2 class="formGroupTitle">
+                Endereço da Loja
+            </h2>
+
+            <div class="row">
+                <mat-form-field appearance="outline" class="col-sm-2">
+                    <mat-label>CEP</mat-label>
+                    <input matInput type="email">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="col-sm-5">
+                    <mat-label>Endereço</mat-label>
+                    <input matInput type="email">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="col-sm-2">
+                    <mat-label>Complemento</mat-label>
+                    <input matInput type="email">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="col-sm-3">
+                    <mat-label>Bairro</mat-label>
+                    <input matInput type="email">
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <mat-form-field appearance="outline" class="col-sm-6">
+                    <mat-label>Cidade</mat-label>
+                    <input matInput type="email">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="col-sm-6">
+                    <mat-label>Estado</mat-label>
+                    <mat-select>
+                        <mat-option value="sp">
+                            São Paulo
+                        </mat-option>
+                        <mat-option value="rj">
+                            Rio de Janeiro
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <h2 class="formGroupTitle">
+                Identidade Visual da Loja
+            </h2>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <app-image-cover text="Logo da Loja"></app-image-cover>
+                </div>
+                <div class="col-sm-9">
+                    <app-image-cover text="Capa da Loja"></app-image-cover>
+                </div>
+                <div class="col-sm-3">
+                    <app-store-colors></app-store-colors>
+                </div>
+            </div>
+
+            <div class="formAction">
+                <button mat-flat-button color="primary" class="formAction-btn">
+                    Salvar Alterações
+                </button>
+            </div>
+        </mat-card>
+    </div>
+
+</section>

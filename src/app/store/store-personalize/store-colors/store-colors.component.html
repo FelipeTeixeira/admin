@@ -1,0 +1,11 @@
+<mat-form-field appearance="outline">
+    <mat-label>
+        Cor Predominante
+    </mat-label>
+    <mat-select>
+        <mat-option [value]="color" *ngFor="let color of colors">
+            <span class="square" [ngClass]="'square-'+color"></span>
+            {{color}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>

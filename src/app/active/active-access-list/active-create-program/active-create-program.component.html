@@ -42,17 +42,14 @@
                         sua nova área se quiser manter seu mesmo logo basta deixar esses campos vazios.
                     </p>
 
-                    <p class="program-cover">
-                        Capa Alterantiva <small>(campo opcional)</small>
-                    </p>
-
-                    <app-image-cover></app-image-cover>
-
-                    <p class="program-cover">
-                        Logo Alterantivo <small>(campo opcional)</small>
-                    </p>
-
-                    <app-image-cover class="program-logoCover"></app-image-cover>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <app-image-cover text="Logo Alterantivo" [isOptional]="true"></app-image-cover>
+                        </div>
+                        <div class="col-sm-9">
+                            <app-image-cover text="Capa Alterantiva" [isOptional]="true"></app-image-cover>
+                        </div>
+                    </div>
 
                     <div class="formAction">
                         <button mat-flat-button color="primary" matStepperNext class="formAction-btn">

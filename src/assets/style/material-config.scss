@@ -203,3 +203,10 @@ $secondary-typography: mat-typography-config(
 .mat-hint {
     font-size: 12px;
 }
+
+.mat-option {
+    .mat-option-text {
+        display: inline-flex;
+        align-items: center;
+    }
+}
