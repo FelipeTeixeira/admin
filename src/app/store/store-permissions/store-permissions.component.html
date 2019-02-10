@@ -1,3 +1,23 @@
-<p>
-  store-permissions works!
-</p>
+<section class="sessionHeader">
+    <div class="sessionHeader-content">
+        <h1 class="sessionHeader-title">
+            Permissões
+        </h1>
+        <p class="sessionHeader-subtitle">
+            Conceda acesso diferenciado a cada membro de sua organização
+
+            <span class="breakLine">
+               Gerencie o que seus colaboradores podem acessar de cada unidade.
+            </span>
+        </p>
+    </div>
+
+    <button mat-flat-button color="primary" routerLink="/store/units/add">
+        <mat-icon>add</mat-icon>
+        Adicionar Colaborador
+    </button>
+</section>
+
+<section>
+    <app-store-permissions-table></app-store-permissions-table>
+</section>

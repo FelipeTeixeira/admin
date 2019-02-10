@@ -9,6 +9,7 @@ import { StoreBookingComponent } from './store-booking/store-booking.component';
 import { SharedModule } from '../shared/shared.module';
 import { StoreUnitsTableComponent } from './store-units/store-units-table/store-units-table.component';
 import { StoreUnitsAddComponent } from './store-units/store-units-add/store-units-add.component';
+import { StorePermissionsTableComponent } from './store-permissions/store-permissions-table/store-permissions-table.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { StoreUnitsAddComponent } from './store-units/store-units-add/store-unit
         StorePermissionsComponent,
         StoreBookingComponent,
         StoreUnitsTableComponent,
-        StoreUnitsAddComponent
+        StoreUnitsAddComponent,
+        StorePermissionsTableComponent
     ],
     imports: [
         CommonModule,
