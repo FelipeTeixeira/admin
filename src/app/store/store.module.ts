@@ -11,6 +11,7 @@ import { StoreUnitsTableComponent } from './store-units/store-units-table/store-
 import { StoreUnitsAddComponent } from './store-units/store-units-add/store-units-add.component';
 import { StorePermissionsTableComponent } from './store-permissions/store-permissions-table/store-permissions-table.component';
 import { StoreColorsComponent } from './store-personalize/store-colors/store-colors.component';
+import { StoreBookingTableComponent } from './store-booking/store-booking-table/store-booking-table.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { StoreColorsComponent } from './store-personalize/store-colors/store-col
         StoreUnitsTableComponent,
         StoreUnitsAddComponent,
         StorePermissionsTableComponent,
-        StoreColorsComponent
+        StoreColorsComponent,
+        StoreBookingTableComponent
     ],
     imports: [
         CommonModule,
