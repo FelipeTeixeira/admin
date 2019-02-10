@@ -85,3 +85,20 @@
 .margin-bottom-16 {
     margin-bottom: 16px
 }
+
+
+.review {
+    &-star {
+        font-size: 16px;
+        display: flex;
+        justify-content: flex-end;
+
+        .icon {
+            margin-right: 4px;
+
+            &.isActive {
+                color: $color-yellow;
+            }
+        }
+    }
+}

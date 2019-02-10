@@ -1,21 +1,5 @@
 @import "../../../assets/style/variables";
 
-.productTable {
-    &-star {
-        font-size: 16px;
-        display: flex;
-        justify-content: flex-end;
-
-        .icon {
-            margin-right: 4px;
-
-            &.isActive {
-                color: $color-yellow;
-            }
-        }
-    }
-}
-
 ::ng-deep {
     .productTable {
         &-discount {

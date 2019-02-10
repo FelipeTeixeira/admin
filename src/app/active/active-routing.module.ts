@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ActiveAccessListComponent } from './active-access-list/active-access-list.component';
+import { ActiveCreateProgramComponent } from './active-access-list/active-create-program/active-create-program.component';
 
 const routes: Routes = [
     {
@@ -10,7 +11,11 @@ const routes: Routes = [
             {
                 path: '',
                 component: ActiveAccessListComponent
-            }
+            },
+            {
+                path: 'create',
+                component: ActiveCreateProgramComponent
+            },
         ]
     },
 ];
