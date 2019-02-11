@@ -2,7 +2,6 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
-    selector: 'app-product-register-modal',
     templateUrl: './product-register-modal.component.html',
     styleUrls: ['./product-register-modal.component.scss']
 })

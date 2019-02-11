@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Breadcrumb } from 'src/app/shared/breadcrumbs/breadcrumb.interface';
 
 @Component({
-    selector: 'app-store-units-add',
-    templateUrl: './store-units-add.component.html',
-    styleUrls: ['./store-units-add.component.scss']
+    templateUrl: './store-units-add.component.html'
 })
 export class StoreUnitsAddComponent implements OnInit {
     listBreadcrumb: Breadcrumb[] = [

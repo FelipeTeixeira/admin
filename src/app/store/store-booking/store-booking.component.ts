@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-store-booking',
-    templateUrl: './store-booking.component.html',
-    styleUrls: ['./store-booking.component.scss']
+    templateUrl: './store-booking.component.html'
 })
 export class StoreBookingComponent implements OnInit {
 

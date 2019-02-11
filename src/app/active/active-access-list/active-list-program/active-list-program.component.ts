@@ -28,8 +28,7 @@ const TABLE_DATA: Program[] = [
 
 @Component({
     selector: 'app-active-list-program',
-    templateUrl: './active-list-program.component.html',
-    styleUrls: ['./active-list-program.component.scss']
+    templateUrl: './active-list-program.component.html'
 })
 export class ActiveListProgramComponent implements OnInit {
     displayedColumns: string[] = ['select', 'program', 'product', 'member', 'sold', 'rating', 'visible', 'actions'];

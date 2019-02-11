@@ -29,8 +29,7 @@ const TABLE_DATA: Collaborator[] = [
 
 @Component({
     selector: 'app-store-permissions-table',
-    templateUrl: './store-permissions-table.component.html',
-    styleUrls: ['./store-permissions-table.component.scss']
+    templateUrl: './store-permissions-table.component.html'
 })
 export class StorePermissionsTableComponent implements OnInit {
     displayedColumns: string[] = ['collaborator', 'unity', 'city', 'state', 'permission', 'actions'];

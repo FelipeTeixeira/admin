@@ -34,8 +34,7 @@ const TABLE_DATA: Unit[] = [
 
 @Component({
     selector: 'app-store-units-table',
-    templateUrl: './store-units-table.component.html',
-    styleUrls: ['./store-units-table.component.scss']
+    templateUrl: './store-units-table.component.html'
 })
 export class StoreUnitsTableComponent implements OnInit {
     displayedColumns: string[] = [

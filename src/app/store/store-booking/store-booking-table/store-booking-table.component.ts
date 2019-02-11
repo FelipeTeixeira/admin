@@ -27,8 +27,7 @@ const TABLE_DATA: Booking[] = [
 
 @Component({
     selector: 'app-store-booking-table',
-    templateUrl: './store-booking-table.component.html',
-    styleUrls: ['./store-booking-table.component.scss']
+    templateUrl: './store-booking-table.component.html'
 })
 export class StoreBookingTableComponent implements OnInit {
 

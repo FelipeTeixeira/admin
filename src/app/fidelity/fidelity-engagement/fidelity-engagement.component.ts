@@ -3,9 +3,7 @@ import { MatDialog } from '@angular/material';
 import { FidelityEngagementModalAddComponent } from './fidelity-engagement-modal-add/fidelity-engagement-modal-add.component';
 
 @Component({
-  selector: 'app-fidelity-engagement',
-  templateUrl: './fidelity-engagement.component.html',
-  styleUrls: ['./fidelity-engagement.component.scss']
+    templateUrl: './fidelity-engagement.component.html'
 })
 export class FidelityEngagementComponent implements OnInit {
 

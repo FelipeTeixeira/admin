@@ -3,7 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { ProductRegisterModalComponent } from './product-register-modal/product-register-modal.component';
 
 @Component({
-    selector: 'app-product-register',
     templateUrl: './product-register.component.html',
     styleUrls: ['./product-register.component.scss']
 })
