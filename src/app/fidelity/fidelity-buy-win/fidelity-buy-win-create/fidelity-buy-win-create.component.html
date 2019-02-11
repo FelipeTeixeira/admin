@@ -1,0 +1,37 @@
+<div class="container">
+    <app-breadcrumbs [listBreadcrumb]="listBreadcrumb"></app-breadcrumbs>
+
+    <h1 class="sessionHeader-title margin-bottom-16">
+        Criar Cupom
+    </h1>
+
+    <mat-card>
+        <h2 class="formGroupTitle">
+            Selecione os produtos para criar a Promoção
+        </h2>
+
+        <app-product-table
+            [displayedCustom]="displayedCustom"
+            [hideBulkActions]="true"
+            class="breakLine margin-bottom-16">
+        </app-product-table>
+
+        <h2 class="formGroupTitle">
+            Total de reservas necessárias
+        </h2>
+
+        <div class="row">
+            <mat-form-field appearance="outline" class="col-sm-3">
+                <mat-label>Total de Reservas</mat-label>
+                <input matInput type="number">
+            </mat-form-field>
+        </div>
+
+        <div class="formAction">
+            <button mat-flat-button color="primary" class="formAction-btn">
+                Criar Cupom
+            </button>
+        </div>
+    </mat-card>
+
+</div>

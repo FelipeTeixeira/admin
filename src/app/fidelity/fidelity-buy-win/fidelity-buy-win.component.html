@@ -4,16 +4,30 @@
             Sistema de Cupom (Compre X Ganhe 1)
         </h1>
         <p class="sessionHeader-subtitle">
-            Selecione um de seus produtos para ser promovido nas redes sociais
+            Um programa onde seus clientes ganham pela frequência de compras.
+
+            <span class="breakLine">
+                Um cupom no valor do produto é conferido ao cliente que atingir
+                o número estipulado de compras que você definir.
+            </span>
+
+            <span class="breakLine">
+                Clique em
+                <a routerLink="/fidelity/buy-win/create" class="decoration">
+                    <strong>
+                        Criar Cupom
+                    </strong>
+                </a>e crie sua promoção.
+            </span>
         </p>
     </div>
 
-    <button mat-flat-button color="primary" routerLink="fidelity/buy-win/create">
+    <button mat-flat-button color="primary" routerLink="/fidelity/buy-win/create">
         <mat-icon>add</mat-icon>
-        Criar Programa
+        Criar Cupom
     </button>
 </section>
 
 <section>
-
+    <app-fidelity-buy-win-table></app-fidelity-buy-win-table>
 </section>

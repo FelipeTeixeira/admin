@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FidelityEngagementComponent } from './fidelity-engagement/fidelity-engagement.component';
 import { FidelityBuyWinComponent } from './fidelity-buy-win/fidelity-buy-win.component';
-import { FidelityCuponsComponent } from './fidelity-cupons/fidelity-cupons.component';
+import { FidelityBuyWinCreateComponent } from './fidelity-buy-win/fidelity-buy-win-create/fidelity-buy-win-create.component';
 
 const routes: Routes = [
     {
@@ -18,9 +18,9 @@ const routes: Routes = [
                 component: FidelityBuyWinComponent
             },
             {
-                path: 'cupons',
-                component: FidelityCuponsComponent
-            }
+                path: 'buy-win/create',
+                component: FidelityBuyWinCreateComponent
+            },
         ]
     },
 ];

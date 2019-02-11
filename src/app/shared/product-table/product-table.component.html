@@ -1,5 +1,5 @@
 <h2 class="subtitle">
-    Lista de produtos <small>(exibindo 7 de 20)</small>
+    Lista de Produtos <small>(exibindo 7 de 20)</small>
 </h2>
 
 
@@ -7,8 +7,7 @@
     <div class="table-header">
         0 de 10 selecionado
 
-        <mat-form-field class="table-header-actions">
-
+        <mat-form-field class="table-header-actions" *ngIf="!hideBulkActions">
             <mat-select placeholder="Ações em massa">
                 <mat-option value="pause">Pausar</mat-option>
                 <mat-option value="delete">Excluir</mat-option>

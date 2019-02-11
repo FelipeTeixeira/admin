@@ -39,7 +39,6 @@ export class MenuComponent implements OnInit {
                 subMenu: [
                     { name: 'engagement', url: 'fidelity/engagement' },
                     { name: 'buy-win', url: 'fidelity/buy-win' },
-                    { name: 'cupons', url: 'fidelity/cupons' }
                 ]
             },
             {

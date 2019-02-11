@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-store-personalize',
-  templateUrl: './store-personalize.component.html',
-  styleUrls: ['./store-personalize.component.scss']
+    templateUrl: './store-personalize.component.html'
 })
 export class StorePersonalizeComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

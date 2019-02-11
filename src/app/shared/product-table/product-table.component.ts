@@ -15,9 +15,12 @@ export interface Product {
 }
 
 const TABLE_DATA: Product[] = [
-    { product: 'Celular', quantity: 10, value: 1500, sold: 4, rating: 'rating', visible: true, date: '25/03/2019' },
-    { product: 'iPhone', quantity: 30, value: 1900, sold: 3, rating: 'rating', visible: true, date: '25/03/2019' },
-    { product: 'Samsung', quantity: 25, value: 700, sold: 10, rating: 'rating', visible: true, date: '25/03/2019' }
+    { product: 'Tablet', quantity: 10, value: 1500, sold: 4, rating: 'rating', visible: true, date: '25/03/2019' },
+    { product: 'iPhone XR', quantity: 10, value: 1900, sold: 3, rating: 'rating', visible: true, date: '25/03/2019' },
+    { product: 'Samsung S8', quantity: 15, value: 700, sold: 10, rating: 'rating', visible: true, date: '25/03/2019' },
+    { product: 'Xiaomi', quantity: 20, value: 1500, sold: 4, rating: 'rating', visible: true, date: '25/03/2019' },
+    { product: 'iPhone 7', quantity: 12, value: 1900, sold: 3, rating: 'rating', visible: true, date: '25/03/2019' },
+    { product: 'Samsung S9', quantity: 12, value: 700, sold: 10, rating: 'rating', visible: true, date: '25/03/2019' }
 ];
 // APENAS TESTE
 
@@ -29,6 +32,7 @@ const TABLE_DATA: Product[] = [
 export class ProductTableComponent implements OnInit {
     @Input() hideActions = false;
     @Input() displayedCustom: string[];
+    @Input() hideBulkActions = false;
 
     displayedColumns: string[] = ['select', 'product', 'quantity', 'value', 'sold', 'rating', 'visible', 'date', 'actions'];
 
