@@ -1,5 +1,8 @@
+<!--
+    TO DO, receber a variavel pra transfomar em TRANSLATE
+ -->
 <label for="inputFile" class="upload-text">
-    Selecione arquivo com a lista de usuário que terão acesso a está área exclusiva
+    {{text}}
 </label>
 
 <div class="upload">
@@ -12,5 +15,5 @@
     </button>
 </div>
 <mat-hint class="upload-help">
-    Arquivo suportado: .xls / Limite de tamanho: 10mb
+    Arquivo suportado: {{fileSupport}} / Limite de tamanho: {{sizeLimit}} mb
 </mat-hint>

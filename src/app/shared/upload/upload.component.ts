@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UploadComponent implements OnInit {
     @Input() text: string;
+    @Input() fileSupport: string;
+    @Input() sizeLimit: number;
 
     constructor() { }
 
