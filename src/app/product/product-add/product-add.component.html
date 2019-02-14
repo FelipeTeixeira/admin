@@ -1,0 +1,106 @@
+<!--
+    achar upload padrao do arquivo
+ -->
+<div class="productAdd container">
+    <app-breadcrumbs [listBreadcrumb]="listBreadcrumb"></app-breadcrumbs>
+
+    <h1 class="sessionHeader-title margin-bottom-16">
+        Adicionar Produto
+    </h1>
+
+    <mat-card>
+        <h2 class="formGroupTitle">
+            Selecione o tipo de Cadastro
+        </h2>
+
+        <mat-radio-group [(ngModel)]="type">
+            <mat-radio-button value="manual">
+                Cadastro manual
+            </mat-radio-button>
+            <mat-radio-button value="lote">
+                Cadastro em Lote <small>(.excel)</small>
+            </mat-radio-button>
+        </mat-radio-group>
+
+        <div *ngIf="type === 'manual'">
+            <h2 class="formGroupTitle">
+                Dados do Produto
+            </h2>
+            <mat-form-field appearance="outline">
+                <mat-label>Nome do Produto</mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Código</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Quantidade</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Tags</mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Regras</mat-label>
+                <textarea matInput placeholder="Digite as regras necessárias"></textarea>
+            </mat-form-field>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Categoria</mat-label>
+                        <mat-select placeholder="Select">
+                            <mat-option value="option">Option</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Sub categoria</mat-label>
+                        <mat-select placeholder="Select">
+                            <mat-option value="option">Option</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <app-image-cover text="Imagem do Produto" [isOptional]="true"></app-image-cover>
+
+            <mat-slide-toggle>Produto ativo</mat-slide-toggle>
+        </div>
+
+        <!-- ADD LOTE -->
+        <!-- USAR O COMPONENTE -->
+        <div *ngIf="type === 'lote'" class="modal-register-uploadLote">
+            <h2 class="formGroupTitle">
+                Selecione o Lote
+            </h2>
+
+            <app-upload
+                    text="Selecione arquivo com lista de Produtos"
+                    fileSupport=".xls"
+                    sizeLimit="10">
+            </app-upload>
+
+        </div>
+
+        <div class="formAction">
+            <button mat-flat-button color="primary" matStepperNext class="formAction-btn">
+                Adicionar Produto
+            </button>
+        </div>
+    </mat-card>
+</div>

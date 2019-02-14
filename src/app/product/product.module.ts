@@ -3,22 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { ProductRoutingModule } from './product-routing.module';
 
-import { ProductRegisterComponent } from './product-register/product-register.component';
-import { ProductRegisterModalComponent } from './product-register/product-register-modal/product-register-modal.component';
 import { SharedModule } from '../shared/shared.module';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductAddComponent } from './product-add/product-add.component';
 
 @NgModule({
     declarations: [
-        ProductRegisterComponent,
-        ProductRegisterModalComponent
+        ProductListComponent,
+        ProductAddComponent
     ],
     imports: [
         CommonModule,
         ProductRoutingModule,
         SharedModule
     ],
-    entryComponents: [
-        ProductRegisterModalComponent
-    ]
 })
 export class ProductModule { }

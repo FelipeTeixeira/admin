@@ -1,0 +1,14 @@
+@import "../../../assets/style/variables";
+
+::ng-deep {
+    .productAdd {
+        .mat-radio-group {
+            padding: 0 0 $space-side;
+            display: block;
+
+            .mat-radio-button {
+                margin-right: $space-side;
+            }
+        }
+    }
+}
